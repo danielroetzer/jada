@@ -1,0 +1,34 @@
+{
+  "name": "jada",
+  "version": "1.0.0",
+  "description": "JaDa is a template, which delivers responsive predefined html elements with the help of Less and Grunt",
+  "main": "index.html",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielroetzer/jada.git"
+  },
+  "keywords": [
+    "Less",
+    "Grunt",
+    "Responsive",
+    "jQuery"
+  ],
+  "author": "Jakob Auer, Daniel Rötzer",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/danielroetzer/jada/issues"
+  },
+  "homepage": "https://github.com/danielroetzer/jada#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}
