@@ -1,0 +1,10 @@
+# Node
+node_modules
+
+# Intellij
+*.iml
+.idea/modules.xml
+.idea/RVP-Repository.iml
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/
