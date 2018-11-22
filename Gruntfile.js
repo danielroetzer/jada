@@ -8,7 +8,7 @@ module.exports = function(grunt){
             compile:{
                 files:{
                     //Destination   :   Source
-                    'css/jada.css' : 'less/jada.less'
+                    'public/css/jada.css' : 'src/less/jada.less'
                 }
             }
         },
@@ -17,7 +17,7 @@ module.exports = function(grunt){
             target:{
                 files:{
                     //Destination      :   Source
-                    'css/jada.min.css' : 'css/jada.css'
+                    'public/css/jada.min.css' : 'public/css/jada.css'
                 }
             }
         },
@@ -27,17 +27,52 @@ module.exports = function(grunt){
 			my_target:{
 				files:{
                     //Destination    :  Source
-					'js/jada.min.js' : ['js/panel.js','js/library.js','js/onload.js','js/jada2.js']
+					'public/js/jada.min.js' : ['src/js/panel.js','src/js/library.js','src/js/onload.js','src/js/thumbnail.js']
 				}
 			}
-		}
+        },
+        
+
+        //Zip compiled- & source-files for download
+        compress: {
+            "compiled-files": {
+                options: {
+                    archive: 'public/media/downloads/compiled-files.zip'
+                },
+                files: [
+                    {
+                        src: ['css/jada.min.css', 'css/jada.css', 'js/jada.min.js'],
+                        dest: "",
+                        filter: "isFile",
+                        cwd: "public/",
+                        expand: true
+                    }
+                ]
+            },
+            'source-files': {
+                options: {
+                    archive: 'public/media/downloads/source-files.zip'
+                },
+                files: [
+                    {
+                        src: ['js/*', 'less/*'],
+                        dest: "",
+                        cwd: "src/",
+                        expand: true
+                    }
+                ]
+            }
+        }
     });
 
     //Load plugins
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-zip');
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-zip-directories');
 
-    //This Tasks will be done
-    grunt.registerTask('default',['less','cssmin','uglify']);
+    //Default tasks
+    grunt.registerTask('default',['less','cssmin','uglify','compress']);
 };

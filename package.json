@@ -2,9 +2,9 @@
   "name": "jada",
   "version": "1.0.0",
   "description": "JaDa is a template, which delivers responsive predefined html elements with the help of Less and Grunt",
-  "main": "index.html",
+  "main": "public/index.html",
   "directories": {
-    "example": "examples"
+    "example": "public/examples"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,11 +22,12 @@
   "author": "Jakob Auer, Daniel Rötzer",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/danielroetzer/jada/issues"
+    "url": "https://gitlab.com/daniel.roetzer/jada/issues"
   },
-  "homepage": "https://github.com/danielroetzer/jada#readme",
+  "homepage": "https://jada-template.netlify.com/",
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.3",
+    "grunt-contrib-compress": "^1.4.3",
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-uglify": "^2.0.0"
