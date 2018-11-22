@@ -1,6 +1,6 @@
 {
   "name": "jada",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JaDa is a template, which delivers responsive predefined html elements with the help of Less and Grunt",
   "main": "public/index.html",
   "directories": {
