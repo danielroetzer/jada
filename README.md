@@ -1,6 +1,6 @@
 <p>
   <a href="https://gitlab.com/daniel.roetzer/jada">
-    <img src="media/icon/ms-icon-150x150.png">
+    <img src="public/media/icon/ms-icon-150x150.png">
   </a>
 </p>
 
